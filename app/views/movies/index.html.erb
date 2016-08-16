@@ -1,0 +1,9 @@
+<h1>Rotten Mangoes</h1>
+<hr>
+<% @movies.each do |movie| %>
+  <h2><%= link_to movie.title, post_path(movie) %></h2>
+  <h3><%= movie.director %></h3>
+  <small><%= movie.runtime_in_minutes %><%= movie.release_date %></small>
+  <p><%= movie.description%></p>
+  <small><%= movie.post_image_url %></small>
+<% end %>
